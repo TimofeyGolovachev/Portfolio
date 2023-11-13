@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Список</h1>
+      <div id="app">
+        <form class="app-form" id="app-form">
+          <input type="text" id="app-form__name" class="form-input" placeholder="Введите Имя" required>
+          <input type="text" id="app-form__surname" class="form-input" placeholder="Введите Фамилию" required>
+          <input type="text" id="app-form__lastname" class="form-input" placeholder="Введите Отчество" required>
+          <input type="date" id="app-form__birthdate" class="form-input" placeholder="Введите дату рождения" required>
+          <input type="number" id="app-form__startdate" class="form-input" placeholder="Введите Дату начала обучения" required>
+          <input type="text" id="app-form__faculty" class="form-input" placeholder="Введите Факультет" required>
+          <button class="add-btn" id="add-btn">
+            Добавить студента
+          </button>
+        </form>
+        <form class="filter-form">
+          <h2>
+            Фильтры
+          </h2>
+          <input type="text" id="filter-name" placeholder="Введите ФИО">
+          <input type="text" id="filter-faculty" placeholder="Введите Факультет">
+          <input type="number" id="filter-education__start" placeholder="Введите Год начала обучения">
+          <input type="number" id="filter-education__end" placeholder="Введите Год окончания обучения">
+          <button id="search-btn" class="search-btn">
+            Поиск
+          </button>
+          <button id="reset-btn" class="reset-btn">
+            Сбросить фильтр
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

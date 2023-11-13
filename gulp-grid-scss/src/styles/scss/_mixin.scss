@@ -1,0 +1,30 @@
+@import '_var.scss';
+
+@mixin indent_clear {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin btn_reset {
+  border: none;
+}
+
+@mixin list-reset {
+  list-style: none;
+}
+
+@mixin transition-color {
+  transition: color 0.3s ease-in-out;
+}
+
+@mixin transition-BG-color {
+  transition: background-color 0.3s ease-in-out;
+}
+
+@mixin section-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  font-family: $font-stack-FirsNeue;
+  margin: 0;
+}

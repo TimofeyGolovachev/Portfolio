@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0px 50px;
+  margin: 0 auto;
+  padding-top: 50px;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.label-input span {
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-spacing: 0;
+  text-align: center;
+}
+
+
+.add-btn {
+  margin-bottom: 20px;
+}
+
+th {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-form input {
+  margin-bottom: 10px;
+}
+
+.search-btn, .reset-btn {
+  max-width: 150px;
+  margin-bottom: 10px;
+}

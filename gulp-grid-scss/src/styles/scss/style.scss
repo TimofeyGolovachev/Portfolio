@@ -1,0 +1,110 @@
+@import '_var.scss';
+@import '_mixin.scss';
+@import '_fonts.scss';
+@import '_header.scss';
+@import '_section-hero.scss';
+@import '_section-about.scss';
+@import '_section-projects.scss';
+@import '_contacts.scss';
+@import '_footer.scss';
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @include indent_clear;
+  font-family: $font-stack-Roboto;
+}
+
+.container {
+  max-width: 1352px;
+  margin: 0 auto;
+  padding: 0 31px;
+
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 27px;
+  }
+}
+@media (max-width: 612px) {
+  .container {
+    padding: 0 21px;
+  }
+}
+.grid {
+  display: grid;
+}
+
+.burger {
+  display: none;
+  width: 20px;
+  height: 18px;
+  position: relative;
+  background-color: transparent;
+  @include indent_clear;
+  @include btn_reset;
+  cursor: pointer;
+}
+
+.burger__line {
+  position: absolute;
+
+  background-color: $color1;
+}
+
+.burger__line:first-child {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.burger__line:nth-child(2) {
+  top: 48%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.burger__line:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+}
+
+.hashtag {
+  position: absolute;
+  color: $color1;
+  background-color: $color2;
+  padding: 7px 15px;
+  font-family: $font-stack-Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  font-family: $font-stack-Roboto;
+  font-weight: 400;
+font-size: 9px;
+line-height: 11px;
+color: #F06666!important;
+top: 3px;
+left: 23px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}

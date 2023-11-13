@@ -1,0 +1,254 @@
+@import '_var.scss';
+@import '_mixin.scss';
+@import '_fonts.scss';
+@import '_contacts.scss';
+
+.menu-close {
+  display: none;
+  @include btn_reset;
+  @include indent_clear;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header-menu--active {
+  left: 0!important;
+}
+.active {
+  display: flex!important;
+}
+.header {
+  background-color: $color2;
+  margin-bottom: 41px;
+}
+
+.header-search__form {
+  display: none;
+  position: absolute;
+  right: 60px;
+  top: 0;
+  align-items: center;
+  // width: 308px;
+  input {
+    width: 200px;
+    margin-right: 10px;
+    color: #cacaca;
+    border: none;
+    border-bottom: 1px solid #cacaca;
+    background-color: $color2;
+    &::-webkit-input-placeholder {
+      color: #e9e9e9;
+      font-family: $font-stack-FirsNeue;
+
+    }
+  }
+  button {
+    @include btn_reset;
+    background-color: transparent;
+    @include indent_clear;
+    cursor: pointer;
+  }
+}
+.header__container {
+  display: flex;
+  height: 80px;
+  background-color: $color2;
+  align-items: center;
+  position: relative;
+
+  .header__logo {
+    margin-right: 139.75px;
+  }
+
+  .header__btn {
+    width: 25px;
+    height: 25px;
+    @include indent_clear;
+    @include btn_reset;
+    background-color: transparent;
+    position: absolute;
+    right: 31px;
+    cursor: pointer;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  .header-menu__tel {
+    font-family: $font-stack-FirsNeue;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-hover;
+    text-decoration: none;
+    display: none;
+    // display: flex;
+;    svg {
+      margin-right: 2.75px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .header__nav {
+    display: flex;
+  }
+
+  .header-menu {
+    @include list-reset;
+    @include indent_clear;
+    font-family: $font-stack-FirsNeue;
+    display: flex;
+
+    .menu__item {
+      &:not(:last-child) {
+        margin-right: 79px;
+      }
+    }
+  }
+
+  .header__link {
+    text-decoration: none;
+    color: $color1;
+    @include transition-color;
+    &:focus {
+      background-color: $color-focus;
+      color: $color1
+    }
+
+    &:hover {
+      color: $color-hover
+    }
+
+    &:active {
+      background-color: transparent;
+      color: $color-active;
+    }
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .header {
+    margin-bottom: 34px;
+  }
+  .header__container {
+    .header__logo {
+      margin-right: 82px;
+      width: 166px;
+    }
+
+    .header-menu {
+      .menu__item:not(:last-child) {
+        margin-right: 33px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding-top: 27px;
+    margin-bottom: 35px;
+
+  }
+  .header__container {
+    display: block;
+    height: 99px;
+    padding: 0!important;
+
+    .header__logo {
+      margin-right: 0;
+      margin-bottom: 24px;
+      width: 193px;
+    }
+
+    .header-menu {
+      padding: 13px 27px;
+      color: $color1;
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .header__nav {
+    background-color: #4a4a4a;
+
+  }
+
+  .header__logo {
+    padding-left: 27px;
+  }
+
+  .header__btn {
+    top: 0;
+    right: 27px!important;
+  }
+}
+
+
+@media (max-width: 612px) {
+  .menu-close {
+    display: block;
+    margin-bottom: 16px;
+  }
+  .header {
+    margin-bottom: 34px;
+  }
+
+  .header__container {
+    height: 85px;
+    .header-menu__tel {
+      display: flex;
+      position: absolute;
+      bottom: 50px;
+    }
+    .header-menu {
+      position: absolute;
+      top: 0;
+      left: -100vw;
+      // left: 0;
+      z-index: 900;
+      display: none;
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      padding: 0;
+      padding-left: 21px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background-color: $color2;
+      transition: left 0.5s cubic-bezier(0.68, 0.55, 0.27, 1.55);
+    }
+  }
+  .header__container .header-menu .menu__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .header__nav {
+    background-color: #4a4a4a;
+    height: 45px;
+    align-items: center;
+    padding-left: 21px;
+
+    .burger {
+      display: block;
+    }
+  }
+  .header__logo {
+    width: 132.55px!important;
+    height: 18px;
+    padding-left: 21px;
+    margin-bottom: 23px!important;
+  }
+  .header__container {
+  .header__btn {
+    right: 21px!important;
+    width: 20px;
+    height: 20px;
+  }
+}
+}

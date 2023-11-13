@@ -1,0 +1,276 @@
+@import '_var.scss';
+@import '_mixin.scss';
+@import '_fonts.scss';
+
+
+.hero {
+  margin-bottom: 64px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 30px;
+
+
+}
+
+.hero-photo-1,
+.hero-photo-2,
+.hero-photo-3,
+.hero-photo-4 {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+
+
+.hero-right-bottom {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 30px;
+}
+
+.hero-right-photos {
+  gap: 25px;
+
+}
+
+.hero-right {
+  height: 100%;
+}
+
+.hero-left {
+  position: relative;
+  // max-height: 630px;
+  height: 100%;
+
+
+  .hashtag {
+    top: 15px;
+    right: 14px;
+  }
+
+}
+
+.hero-left-descr {
+  position: absolute;
+  bottom: 63px;
+  left: 59px;
+
+}
+
+.hero-left-descr {
+  display: flex;
+  flex-direction: column;
+  color: $color1;
+
+  .hero-left__text {
+    @include indent_clear;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 3px;
+    font-family: $font-stack-Roboto;
+  }
+
+  .hero-left__title {
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 104%;
+    margin-bottom: 19px;
+    max-width: 427px;
+    font-family: $font-stack-FirsNeue;
+  }
+
+  .hero-left__btn {
+    @include indent_clear;
+    @include btn_reset;
+    @include transition-color;
+    @include transition-BG-color;
+    cursor: pointer;
+    max-width: 159px;
+    color: $color1;
+    padding: 15.5px 21px;
+    background-color: $color-hover;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $font-stack-Roboto;
+    &:focus {
+      border: 1px solid #CE4307;
+    }
+    &:hover {
+      background-color: $color-focus;
+    }
+    &:active {
+      background-color: $color-active;
+    }
+  }
+}
+
+.hero-right__title {
+  @include indent_clear;
+  font-family: $font-stack-FirsNeue;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: $color2;
+  margin-bottom: 18px;
+}
+
+
+
+
+
+// .hero-photo-2 {
+//   // max-height: 300px;
+//   // max-height: 332px;
+// }
+
+// // .hero-photo-3,
+// // .hero-photo-4 {
+// //   max-height: 257px;
+// // }
+
+
+
+@media (max-width: 1200px) {
+  .hero {
+    margin-bottom: 65px;
+  }
+
+  .hero-photo-2 {
+    min-height: 332px;
+  }
+
+  .hero-photo-3,
+  .hero-photo-4 {
+    min-height: 105px;
+  }
+
+  .hero-right__title {
+    margin-bottom: 25px;
+  }
+
+  .hero-left-descr {
+    left: 30px;
+    bottom: 35px;
+
+    .hero-left__text {
+      margin-bottom: 9px;
+    }
+
+    .hero-left__title {
+      font-size: 34px;
+      line-height: 100%;
+      margin-bottom: 22px;
+    }
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .hero-right__title {
+    font-size: 22px;
+    margin-bottom: 17px;
+  }
+
+  .hero-right-photos {
+    gap: 25px;
+  }
+
+  .hero-photo-2 {
+    min-height: 228px;
+  }
+
+  // .hero-photo-1 {
+  //   min-height: 452px;
+  // }
+
+  .hero-left-descr {
+    left: 28px;
+    bottom: 33px;
+
+    .hero-left__text {
+      margin-bottom: 14px;
+    }
+
+    .hero-left__title {
+      line-height: 90%;
+      margin-bottom: 23px;
+    }
+  }
+
+  .hero-left .hashtag {
+    top: 17px;
+    right: 15px;
+  }
+
+}
+
+@media (max-width: 612px) {
+.hero {
+  margin-bottom: 45px;
+}
+  .hero-grid {
+    display: block;
+  }
+
+  .hero-left {
+    margin-bottom: 30px;
+  }
+
+  .hero-photo-1 {
+    min-height: 422px;
+  }
+
+  .hero-right__title {
+    font-size: 18px;
+    line-height: 104%;
+    margin-bottom: 16px;
+  }
+
+  // .hero-right__top {
+  //   height: 186px;
+  // }
+
+  .hero-photo-2 {
+    min-height: 186px;
+  }
+
+  // .hero-photo-3,
+  // .hero-photo-4 {
+  //   height: 105px;
+  // }
+
+  .hero-left .hashtag {
+    font-size: 12px;
+    padding: 4px 7px;
+    top: 6px;
+    right: 5px;
+  }
+  .hero-left-descr {
+    .hero-left__text {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .hero-left__title {
+      font-size: 24px;
+      line-height: 110%;
+      width: 169px;
+      margin-bottom: 14px;
+    }
+
+    .hero-left__btn {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 13px 22px;
+      width: 145px;
+    }
+  }
+}

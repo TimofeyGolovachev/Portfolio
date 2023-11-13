@@ -1,0 +1,145 @@
+@import '_var.scss';
+@import '_mixin.scss';
+@import '_fonts.scss';
+
+.footer {
+  background-color: $color2;
+  color: $color-gray;
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 26px;
+    padding-bottom: 16px;
+    // height: 106px;
+  }
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  color: #e9e9e9;
+  font-family: $font-stack-FirsNeue;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  .footer-logo__logo {
+    width: 190.25px;
+    margin-bottom: 7px;
+  }
+}
+
+.footer-links__text {
+  display: block;
+  margin-bottom: 10px
+}
+
+.footer-descr {
+  @include indent_clear;
+  max-width: 361px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+}
+
+.footer-position {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.footer-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+
+  svg{
+    path{
+  transition: fill 0.3s ease-in-out;
+    }
+  }
+
+  &:focus svg path{
+    fill: $color-focus;
+  }
+  &:hover svg path {
+    fill: $color-hover;
+
+  }
+  &:active svg path{
+    fill: $color-active;
+
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.ok {
+  margin-right: 16px;
+}
+
+@media (max-width: 1200px) {
+  .footer .footer-container {
+    padding-top: 29px;
+  }
+
+  .footer-logo {
+    .footer-logo__logo {
+      width: 166px;
+      height: 26.8px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-descr {
+    display: none;
+  }
+
+  .footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 612px) {
+  .footer .footer-container {
+    // justify-content:center;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+    gap: 27px;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #4a4a4a;
+    padding: 14px 0;
+    font-size: 10px;
+    .footer-logo__logo {
+      height: 18px;
+      width: 111.5px;
+      margin-bottom: 3px;
+    }
+  }
+.footer-links {
+  padding-top: 31px;
+}
+
+}
